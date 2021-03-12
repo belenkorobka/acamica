@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: $primary-color;
+    font: 400 4rem/4.8rem $primary-font;
+    margin: 0;
+}
+
+p {
+    color: $primary-color;
+    font: 400 1.5rem/2.5rem $secondary-font; 
+    margin: 0;
+}
+
+h3 {
+    color: $primary-color;
+    font: 600 2.6rem $primary-font;
+    margin: 0;
+}
+
+.button {
+    background-color: $secondary-color;
+    color:$primary-color;
+    display: flex;
+    font: 500 1.6rem $secondary-font;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 1.3rem;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+        background-image: linear-gradient(250deg, $tertiary-color 0%, $secondary-color 100%);
+        color: white;
+        transition: all .3s;
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        width: fit-content;
+    }
+}
+
+.anchor {
+    display: block;
+    height: 54px;
+    position: absolute;
+    visibility: hidden;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        height: 90px;
+    }
+
+}

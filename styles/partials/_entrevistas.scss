@@ -1,0 +1,45 @@
+#entrevistas {
+    position: relative;
+
+    .anchor {
+        top: -70px;
+    }
+
+    .entrevistas-img {
+        display: block;
+        width: 100%;
+    }
+
+    h2 {
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+
+        h2 {
+            margin-left: 10rem;
+        }
+        
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+
+        .anchor {
+            top: -120px;
+        }
+
+        h2 {
+            margin-left: 18rem;
+        }
+        
+        div {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}

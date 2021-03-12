@@ -1,0 +1,47 @@
+main {
+    margin: 6.5rem 2rem 2rem 2rem;
+
+    p:last-of-type {
+        display: none;
+    }
+
+    span {
+
+        &:first-of-type {
+            font: inherit;
+            text-decoration: line-through;
+        }
+
+        &:last-of-type {
+            color: $tertiary-color;
+            left: -10px;
+            position: relative;
+        }  
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        margin: 15rem 10rem 1rem 10rem;
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        margin: 20rem 10rem 1rem 20rem;
+
+        h1 {
+            font-size: 6.4rem;
+            line-height: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            width: 620px;
+
+            &:first-of-type {
+                display: none;
+            }
+
+            &:last-of-type {
+                display: block;
+            }
+        }
+    }
+}

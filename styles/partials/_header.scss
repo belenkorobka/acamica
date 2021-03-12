@@ -1,0 +1,124 @@
+header {
+    align-content: flex-start;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 5.4rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .logo {
+        margin: 1rem 2rem 1rem 2rem;
+        width: 3.2rem;
+    }
+
+    nav {
+        align-self: flex-end;
+        background-color: $tertiary-color;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform .2s;
+        width: 100%;
+
+        ul {
+            padding: 0 0 0 2rem;
+        }
+
+        ul li {
+            line-height: 5rem;
+        }
+
+        ul li a {
+            color: white;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .menu-icon, .menu-icon2 {
+        color: #060A24;
+        font-size: 2rem;
+        padding: 1.2rem 2rem;
+    }
+
+    .menu-icon2 {
+        display: none;
+    }
+
+    #menu-button {
+        display: none;
+
+        &:checked ~ nav {
+            transform: scaleY(1);
+        }
+
+        &:checked ~ label {
+
+            & > .menu-icon {
+                display: none;
+            }
+
+            & > .menu-icon2 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    
+    header {
+        align-content: center;
+        height: 8rem;
+        padding: 0 10rem;
+
+
+        .logo {
+            width: 3.6rem;
+        }
+
+        label {
+            display: none;
+        }
+    
+        #menu{
+            background-color: transparent;
+            display: block;
+            padding: 1rem;
+            transform: initial;
+            transition: none;
+            width: auto;
+    
+            ul {
+                margin: 0;
+            }
+        
+            ul li{
+                display: inline-block;
+                padding-left: 4.8rem;
+            }
+        
+            ul li a {
+                color: #060A24;
+
+                &:hover {
+                    color: $secondary-color;
+                    text-decoration: line-through;
+                    transition: all 0.2s;
+                }
+
+                &:active {
+                    color: rgba(6,10,36,0.56);
+                }
+            }
+            
+        }
+ 
+    }    
+}
